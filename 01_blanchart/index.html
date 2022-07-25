@@ -5,10 +5,14 @@
   
   <title>Галлерея Blanchart</title>
   
-  <link rel="stylesheet" href="css/normalize.css.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/test.css">
   
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script defer src="js/index.js"></script>
   <script defer src="js/test.js"></script>
 
@@ -18,7 +22,7 @@
 <header>
   <div class="header-top">
     <div class="container header-top__container">
-      <a href="#" class="header-top__button-burger">
+      <a href="#" class="display-none header-top__button-burger">
         <span class="header-top-line-burger top-line"></span>
         <span class="header-top-line-burger medium-line"></span>
         <span class="header-top-line-burger bottom-line"></span>
@@ -27,12 +31,37 @@
       <a href="#" class="header-top__link"></a>
       
       <ul class="header-top__list">
-        <li class="header-top__item">О нас</li>
-        <li class="header-top__item">Галерея</li>
-        <li class="header-top__item">Каталог</li>
-        <li class="header-top__item">События</li>
-        <li class="header-top__item">Проекты</li>
-        <li class="header-top__item">Контакты</li>
+        <li class="header-top__item">
+          <a href="#section__" class="header-top__link-section">
+            О
+          
+          </a> нас
+        </li>
+        <li class="header-top__item">
+          <a href="#section__gallery" class="header-top__link-section">
+            Галерея
+          </a>
+        </li>
+        <li class="header-top__item">
+          <a href="#section__catalog" class="header-top__link-section">
+            Каталог
+          </a>
+        </li>
+        <li class="header-top__item">
+          <a href="#section__events" class="header-top__link-section">
+            События
+          </a>
+        </li>
+        <li class="header-top__item">
+          <a href="#section__projects" class="header-top__link-section">
+            Проекты
+          </a>
+        </li>
+        <li class="header-top__item">
+          <a href="#section__contacts" class="header-top__link-section">
+            Контакты
+          </a>
+        </li>
       </ul>
       
       <div class="header-top__login">
@@ -40,9 +69,12 @@
         <span class="header-top__text-login"></span>
       </div>
       
-      <button class="header-top__button-search"></button>
-      <input class="header-top__input-search" type="text">
-      <button class="header-top__button-close"></button>
+      <div class="display-none header-top__search">
+        <button class="header-top__button-search"></button>
+        <input class="header-top__input-search" type="text">
+        <button class="header-top__button-close"></button>
+      </div>
+    
     </div>
   
   </div>
@@ -76,41 +108,71 @@
         </span>
         </li>
       </ul>
-      <button class="header-bottom__button"></button>
-      <input class="header-bottom__input" type="text">
+      
+      <div class="display-none header-bottom-search">
+        <button class="header-bottom__button-search"></button>
+        <input class="header-bottom__input-search" type="text">
+      </div>
+    
     </div>
-   
+  
   </div>
 </header>
 
-<main>
+<main class="display-none">
   <h1 class="display-none">Художественная галерея Blancart</h1>
   <section class="section__swiper section" id="section__swiper">
     <div class="container swiper__container">
-    
+      <div class="swiper main-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-slide__main">
+          <h2 class="swiper__head head-2">Прикоснитесь к&nbsp;прекрасному</h2>
+          <p class="swiper__text-description">
+            Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки
+            для новых предложений.
+          </p>
+          <a href="#section__contacts" class="swiper__link">Подписаться на рассылку</a>
+        </div>
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide slide-1"></div>
+          <div class="swiper-slide slide-2"></div>
+          <div class="swiper-slide slide-3"></div>
+        </div>
+      </div>
     </div>
   </section>
   <section class="section__description section" id="section__description">
     <div class="container description__container">
       <h3 class="description__head head-3">О&nbsp;нас</h3>
       <p class="description__text-description text-description">
-        Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
+        Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+        участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов.
+        Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс
+        внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество
+        позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных
+        мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках
+        спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных
+        слоев населения, а&nbsp;значит, должны быть разоблачены.
       </p>
     </div>
   </section>
   <section class="section__gallery section" id="section__gallery">
     <div class="container gallery__container">
       <h3 class="gallery__head head-3">Галлея</h3>
-      
+    
     </div>
   </section>
   <section class="section__catalog section" id="section__catalog">
     <div class="container catalog__container">
       <h3 class="catalog__head head-3">Каталог</h3>
       <p class="catalog__text-description text-description">
-        Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
+        Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+        политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. Являясь всего
+        лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и&nbsp;по&nbsp;сей
+        день остаются уделом либералов, которые жаждут быть функционально разнесены на&nbsp;независимые элементы.
       </p>
-
+    
     </div>
   </section>
   <section class="section__events section" id="section__events">
@@ -123,7 +185,7 @@
       <h3 class="projects__head head-3">Проекты</h3>
     </div>
   </section>
-  <section class="section__map section" id="section__map">
+  <section class="section__contacts section" id="section__contacts">
     <div class="container map__container"></div>
   </section>
 </main>
