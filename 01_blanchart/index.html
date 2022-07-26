@@ -22,20 +22,25 @@
 <header>
   <div class="header-top">
     <div class="container header-top__container">
-      <a href="#" class="display-none header-top__button-burger">
+      <a href="#" class="header-top__button-burger">
         <span class="header-top-line-burger top-line"></span>
         <span class="header-top-line-burger medium-line"></span>
         <span class="header-top-line-burger bottom-line"></span>
       </a>
       
-      <a href="#" class="header-top__link"></a>
+      <a href="#" class="header-top__link">
+        <picture>
+          <source media="(min-width: 720px) and (max-width: 1360px)" srcset="img/head/logo-1024-768.png">
+          <source media="(min-width: 320px) and (max-width: 719px)" srcset="img/head/logo-320.png">
+          <img src="img/head/logo-1920.png" alt="Логотип компании" style="width:auto;">
+        </picture>
+      </a>
       
       <ul class="header-top__list">
         <li class="header-top__item">
           <a href="#section__" class="header-top__link-section">
-            О
-          
-          </a> нас
+            О нас
+          </a>
         </li>
         <li class="header-top__item">
           <a href="#section__gallery" class="header-top__link-section">
@@ -65,47 +70,64 @@
       </ul>
       
       <div class="header-top__login">
-        <span class="header-top__icon"></span>
-        <span class="header-top__text-login"></span>
+        <span class="header-top__icon">
+        <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path
+  d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
+  fill="#fff"/>
+</svg>
+        </span>
+        <span class="header-top__text-login">Войти</span>
       </div>
       
-      <div class="display-none header-top__search">
+      <div class="header-top__search">
         <button class="header-top__button-search"></button>
         <input class="header-top__input-search" type="text">
-        <button class="header-top__button-close"></button>
+        <button class="header-top__button-close">
+          <span class="close-icon close-icon-1"></span>
+          <span class="close-icon close-icon-2"></span>
+        </button>
       </div>
     
     </div>
-  
   </div>
   <div class="header-bottom">
     
     <div class="container header-bottom__container">
       <ul class="header-bottom__list">
-        <li class="header-bottom__item">Реализм
-          <span class="header__bottom-icon">
-        
-        </span>
+        <li class="header-bottom__item">
+          <button class="header-bottom__button-list">
+            Реализм
+            <span class="header__bottom-icon"></span>
+          </button>
+          <span class="header__bottom-icon"></span>
         </li>
-        <li class="header-bottom__item"> Импрессионизм
-          <span class="header__bottom-icon">
-        
-        </span>
+        <li class="header-bottom__item">
+          <button class="header-bottom__button-list">Импрессионизм
+            <span class="header__bottom-icon"></span>
+          </button>
         </li>
-        <li class="header-bottom__item">Постимпрессионизм
-          <span class="header__bottom-icon">
+        <li class="header-bottom__item">
+          <button class="header-bottom__button-list">Постимпрессионизм
+            <span class="header__bottom-icon">
         
         </span>
+          </button>
         </li>
-        <li class="header-bottom__item">Авангард
-          <span class="header__bottom-icon">
-        
-        </span>
+        <li class="header-bottom__item">
+          <button class="header-bottom__button-list">
+            Авангард
+            <span class="header__bottom-icon">
+          </span>
+          </button>
         </li>
-        <li class="header-bottom__item">Футуризм
-          <span class="header__bottom-icon">
+        <li class="header-bottom__item">
+          <button class="header-bottom__button-list">
+            Футуризм
+            <span class="header__bottom-icon">
         
         </span>
+          </button>
         </li>
       </ul>
       

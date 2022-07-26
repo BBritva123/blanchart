@@ -1,3 +1,156 @@
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: url('../fonts/OpenSans-Regular.eot');
+  src: local('Open Sans Regular'), local('OpenSans-Regular'),
+  url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('../fonts/OpenSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: url('../fonts/OpenSans-SemiBold.eot');
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+  url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
+  url('../fonts/OpenSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: url('../fonts/OpenSans-Bold.eot');
+  src: local('Open Sans Bold'), local('OpenSans-Bold'),
+  url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+  url('../fonts/OpenSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --header-background: #000;
+  --main-text-color: #333;
+  --light-text-color: #fff;
+  --active-color: ;
+  --hover-color: ;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+}
+
 .display-none {
   display: none;
+}
+
+.container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.header-top {
+  position: relative;
+  background-color: var(--header-background);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--light-text-color);
+
+}
+
+.header-top__container {
+  display: flex;
+  min-height: 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-top__button-burger {
+  display: none;
+}
+
+.header-top__link {
+  position: absolute;
+  margin-top: 5px;
+}
+
+.header-top__list {
+  display: flex;
+  width: 754px;
+  justify-content: space-between;
+  margin-left: 352px;
+}
+
+.header-top__login {
+  font-weight: 400;
+}
+
+.header-top__search {
+  display: none;
+}
+
+
+/*@media (max-width: 1600px){*/
+
+/*}*/
+@media (max-width: 1400px) {
+  .header-top__button-burger {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+  }
+
+  .header-top__link {
+    left: calc(50% - 94px);
+  }
+
+  .header-top__list,
+  .header-top__login {
+    display: none;
+  }
+
+  .header-top__search {
+    display: block;
+  }
+
+  .header-top__button-search {
+    width: 25px;
+    height: 25px;
+    background: url("../img/head/search-icon.svg") no-repeat center center;
+  }
+
+  .header-top__input-search {
+    background-color: transparent;
+    border-bottom: 1px solid var(--light-text-color);
+    color: var(--light-text-color);
+  }
+
+  .header-top__button-close {
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+  }
+
+
+}
+
+/*@media (max-width: 1024px){}*/
+@media (max-width: 992px) {
+}
+
+/*@media (max-width: 768px){}*/
+@media (max-width: 720px) {
+}
+
+@media (max-width: 576px) {
 }
