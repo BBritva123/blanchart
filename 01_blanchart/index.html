@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   
   <link rel="stylesheet" href="css/swiper.min.css"/>
+  <link rel="stylesheet" href="css/choices.min.css"/>
   
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/test.css">
@@ -144,7 +145,7 @@
 
 <main>
   <h1 class="display-none">Художественная галерея Blancart</h1>
-  <section class="section__swiper section" id="section__swiper">
+  <section class="section__swiper" id="section__swiper">
     <div class="swiper main-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide slide-1"></div>
@@ -164,7 +165,7 @@
     </div>
   
   </section>
-  <section class="display-none section__description section" id="section__description">
+  <section class="section__description section" id="section__description">
     <div class="container description__container">
       <h3 class="description__head head-3">О&nbsp;нас</h3>
       <p class="description__text-description text-description">
@@ -179,12 +180,40 @@
       </p>
     </div>
   </section>
-  <section class="display-none section__gallery section" id="section__gallery">
+  
+  
+  <section class="section__gallery section" id="section__gallery">
     <div class="container gallery__container">
-      <h3 class="gallery__head head-3">Галлея</h3>
-    
+      <div class="gallery__info">
+        <h3 class="gallery__head head-3">Галерея</h3>
+        <h4 class="gallery__head-filter">Фильтр</h4>
+        <div class="gallery__select-block">
+          <select class="gallery__select" name="filter" id="gallery__select" aria-label="Выбрать жанр изобразительного искусства">
+            <option value="1">Живопись</option>
+            <option value="2">Рисунок</option>
+            <option value="3">Скульптура</option>
+          </select>
+          
+          <div class="gallery__checkbox-block">
+            <label>
+            <input type='checkbox'>XIX век
+            </label>
+            <label>
+              <input type='checkbox'>XX век
+            </label>
+            <label>
+              <input type='checkbox'>Современность
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="gallery__swiper swiper">
+      
+      </div>
     </div>
   </section>
+  
+  
   <section class="display-none section__catalog section" id="section__catalog">
     <div class="container catalog__container">
       <h3 class="catalog__head head-3">Каталог</h3>
@@ -227,12 +256,21 @@
   </div>
 </footer>
 <script src="js/swiper.min.js"></script>
+<script src="js/choices.min.js"></script>
 <script>
   let swiper1 = new Swiper('.main-swiper', {
     autoplay: true,
     speed: 5000,
     effect: 'fade',
   })
+  const element = document.querySelector('.gallery__select');
+  const choices = new Choices(element,{
+    searchEnabled: false,
+    position: 'bottom',
+    itemSelectText: '',
+    
+  });
+  
 </script>
 </body>
 </html>

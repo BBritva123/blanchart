@@ -1,10 +1,125 @@
 
+.section__gallery {
+  height: 100%;
+  min-height: 600px;
+  background: url("../img/gallery/gallery_background.png") no-repeat 100%;
+  color: var(--light-text-color);
+}
+
+.gallery__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.gallery__info {
+  width: 50%;
+  height: 600px;
+  /*background-color: greenyellow;*/
+}
+
+.gallery__select-block {
+  /*color: #000;*/
+}
 
 
+.choices {
+  max-width: 400px;
+  height: 40px;
+}
+
+/*видимая часть селекта(не раскрыт) */
+
+.choices .choices__inner {
+  border: 1px solid var(--light-text-color);
+  border-radius: 6px;
+  background-color: transparent;
+  min-height: auto;
+  height: 40px;
+  transition: background-color .3s ease;
+}
+
+/* раскрывающаяся часть селекта */
+
+.choices__list--dropdown, .choices__list[aria-expanded] {
+  background-color: var(--header-background-color);
+  color: #999;
+  border: 1px solid var(--main-text-color);
+  border-radius: 6px;
+}
+
+/* выравнивание текста внутри */
+
+.choices[data-type*=select-one] .choices__inner {
+  display: flex;
+  align-items: center;
+}
+
+/* цвет селекта при выборе */
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: rgba(255, 255, 255, .2);
+  transition: background-color .3s ease;
+}
+
+/*граница между элементами*/
+
+.choices__list--dropdown .choices__item:not(:last-child),
+.choices__list[aria-expanded] .choices__item:not(:last-child) {
+  border-bottom: 1px solid #999;
+}
+
+/*убираем выбранный элемент из дропдауна*/
+
+.choices__list--dropdown .choices__item--selectable.is-selected {
+  display: none;
+}
+
+.is-open .choices__list--dropdown {
+
+}
+
+.choices__inner:hover  {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.choices__inner:active {
+  background-color: rgba(255, 255, 255, .5);
+}
+
+
+.gallery__checkbox-block input {
+  position: relative;
+  margin-left: 40px;
+  /*opacity: 0;*/
+  width: 1px;
+  height: 1px;
+  /*display: inline-block;*/
+}
+
+.gallery__checkbox-block input::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid red;
+  opacity: 1;
+
+}
+
+
+
+
+.gallery__swiper {
+  width: 50%;
+  height: 600px;
+}
 
 
 @media (max-width: 1400px) {
-
 
 
 }
@@ -17,11 +132,9 @@
 @media (max-width: 720px) {
 
 
-
 }
 
 @media (max-width: 576px) {
-
 
 
 }

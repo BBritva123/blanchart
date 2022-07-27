@@ -50,14 +50,37 @@ body {
   font-weight: normal;
 }
 
-
-
 .container {
   max-width: 1700px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 50px;
   padding-right: 50px;
+}
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.head-3,
+.text-description {
+  font-family: 'Open Sans',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(----main-text-color);
+}
+
+.head-3 {
+  margin-bottom: 15px;
+  font-size: 48px;
+  line-height: 65px;
+}
+
+.text-description {
+  max-width: 1080px;
+  font-size: 14px;
+  line-height: 32px;
 }
 
 .header {
@@ -186,6 +209,10 @@ body {
   color: rgba(255, 255, 255, 0.85);
 }
 
+.section__swiper {
+  padding: 0;
+}
+
 .main-swiper {
   position: relative;
   width: 100%;
@@ -241,7 +268,7 @@ body {
 }
 
 .main-swiper .custom-slide__description {
-  margin-bottom: 115px;
+  margin-bottom: 92px;
   font-size: 18px;
   line-height: 30px;
 }
@@ -452,6 +479,10 @@ body {
     margin-bottom: 133px;
   }
 
+  .description__text-description  {
+    font-size: 15px;
+  }
+
 }
 
 @media (max-width: 992px) {
@@ -467,7 +498,7 @@ body {
   }
 
   .main-swiper {
-    min-height: 655px;
+    min-height: 768px;
   }
 
   .main-swiper .slide-1 {
@@ -481,13 +512,29 @@ body {
   .main-swiper .slide-3 {
     background-image: url("../img/swiper/head_swiper3-768.jpg");
   }
+
+  .description__text-description {
+    font-size: 16px;
+  }
+
+
 }
 
 @media (max-width: 720px) {
 
+  .section {
+    padding-top: 65px;
+    /*padding-bottom: 65px;*/
+  }
+
   .container {
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .head-3 {
+    font-size: 38px;
+    line-height: 45px;
   }
 
   .header-top__container {
@@ -516,7 +563,7 @@ body {
   }
 
   .main-swiper {
-    min-height: 455px;
+    min-height: 500px;
   }
 
   .main-swiper .custom-slide {
@@ -544,9 +591,25 @@ body {
 
 @media (max-width: 576px) {
 
+  .section {
+    padding-top: 50px;
+    /*padding-bottom: 50px;*/
+  }
+
   .container {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .head-3 {
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 38px;
+  }
+
+  .text-description {
+    font-size: 14px;
+    line-height: 28px;
   }
 
   .header-top__container {
