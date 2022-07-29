@@ -8,11 +8,12 @@ ul {
   list-style: none;
 }
 
-a, button, input {
+a, button, input, label {
   border: none;
   border-style: none;
   background: none;
   outline: none;
+  cursor: pointer;
 }
 
 body,

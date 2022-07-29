@@ -16,7 +16,8 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/test.css">
   
-  
+  <script src="js/swiper.min.js"></script>
+  <script src="js/choices.min.js"></script>
   <script defer src="js/index.js"></script>
   <script defer src="js/test.js"></script>
 
@@ -186,30 +187,50 @@
     <div class="container gallery__container">
       <div class="gallery__info">
         <h3 class="gallery__head head-3">Галерея</h3>
-        <h4 class="gallery__head-filter">Фильтр</h4>
+        <h4 class="gallery__head-filter">Фильтр:</h4>
         <div class="gallery__select-block">
-          <select class="gallery__select" name="filter" id="gallery__select" aria-label="Выбрать жанр изобразительного искусства">
+          <select class="gallery__select" name="filter" id="gallery__select"
+                  aria-label="Выбрать жанр изобразительного искусства">
             <option value="1">Живопись</option>
             <option value="2">Рисунок</option>
             <option value="3">Скульптура</option>
           </select>
           
-          <div class="gallery__checkbox-block">
-            <label>
-            <input type='checkbox'>XIX век
+          <div class="gallery__checkbox-block checkbox-block">
+            <label class="checkbox__label">
+              <input class="checkbox__input" type='checkbox'>
+              <span class="checkbox__text">XIX век</span>
             </label>
-            <label>
-              <input type='checkbox'>XX век
+            <label class="checkbox__label">
+              <input class="checkbox__input" type='checkbox'>
+              <span class="checkbox__text">XX век</span>
             </label>
-            <label>
-              <input type='checkbox'>Современность
+            <label class="checkbox__label">
+              <input class="checkbox__input" type='checkbox'>
+              <span class="checkbox__text">Современность</span>
             </label>
           </div>
         </div>
       </div>
       <div class="gallery__swiper swiper">
-      
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide slide-1"></div>
+          <div class="swiper-slide slide-2"></div>
+          <div class="swiper-slide slide-3"></div>
+          <div class="swiper-slide slide-4"></div>
+          <div class="swiper-slide slide-5"></div>
+          <div class="swiper-slide slide-6"></div>
+        
+        </div>
+        <div class="swiper__block-button">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
+    
     </div>
   </section>
   
@@ -255,22 +276,6 @@
     </a>
   </div>
 </footer>
-<script src="js/swiper.min.js"></script>
-<script src="js/choices.min.js"></script>
-<script>
-  let swiper1 = new Swiper('.main-swiper', {
-    autoplay: true,
-    speed: 5000,
-    effect: 'fade',
-  })
-  const element = document.querySelector('.gallery__select');
-  const choices = new Choices(element,{
-    searchEnabled: false,
-    position: 'bottom',
-    itemSelectText: '',
-    
-  });
-  
-</script>
+
 </body>
 </html>
