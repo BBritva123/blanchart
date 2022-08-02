@@ -69,10 +69,15 @@ function gallerySwiper() {
 }
 gallerySwiper();
 
-
 $( function() {
     $( ".catalog__accordion" ).accordion({
         collapsible: true,
         heightStyle: "content",
+    });
+} );
+
+$( function() {
+    $( "#catalog__tabs" ).tabs({
+        active: 11,
     });
 } );
