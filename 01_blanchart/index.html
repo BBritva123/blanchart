@@ -19,6 +19,8 @@
   
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
   
   
   <script src="js/swiper.min.js"></script>
@@ -264,10 +266,10 @@
                 <a href="#tab-4" class="accordion__link">Больтраффио, Джованни</a>
               </li>
               <li class="accordion__item">
-                <a href="#tab-5" class="accordion__link">Бонсиньори, Франческо</a>
+                <a href="#tab-none" class="accordion__link">Бонсиньори, Франческо</a>
               </li>
               <li class="accordion__item">
-                <a href="#tab-6" class="accordion__link">Боттичини, Рафаэлло</a>
+                <a href="#tab-none" class="accordion__link">Боттичини, Рафаэлло</a>
               </li>
               <li class="accordion__item">
                 <a href="#tab-none" class="accordion__link">Брамантино</a></li>
@@ -396,21 +398,39 @@
           </div>
         </div>
         <div id="tab-12" class="catalog__tabs-content tab__content">
+          <picture>
+          <source srcset="img/catalog/catalog__tab-12-1024.jpg" media="(max-width: 576px)">
+          <source srcset="img/catalog/catalog__tab-12-768.jpg" media="(max-width: 992px)">
+          <source srcset="img/catalog/catalog__tab-12-1024.jpg" media="(max-width: 1400px)">
+            <img src="img/catalog/catalog__tab-12-1920.jpg" alt="Доменико Гирландайо" class="catalog__tabs-picture">
+          </picture>
           <h4 class="tab__head">Доменико Гирландайо</h4>
           <span class="tab__text-second">2&nbsp;июня 1448&nbsp;&mdash; 11&nbsp;января 1494.</span>
-          <p class="tab__description">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+          <p class="tab__description text-description">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
             художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной
             мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых
             циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских
             персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).</p>
         </div>
         <div id="tab-1" class="catalog__tabs-content tab__content">
+          <picture>
+            <source srcset="img/catalog/catalog__tab-1-1024.jpg" media="(max-width: 576px)">
+            <source srcset="img/catalog/catalog__tab-1-768.jpg" media="(max-width: 992px)">
+            <source srcset="img/catalog/catalog__tab-1-1024.jpg" media="(max-width: 1400px)">
+            <img src="img/catalog/catalog__tab-1-1920.jpg" alt="Бенедетто ди Бинго" class="catalog__tabs-picture">
+          </picture>
           <h4 class="tab__head">Бенедетто ди&nbsp;Биндо</h4>
           <span class="tab__text-second">около 1385&ndash;1417</span>
           <p class="tab__description">Итальянский живописец сиенской школы итало-византийского и&nbsp;готического
             искусства. Родился в&nbsp;местечке Кастильоне ди&nbsp;Вальдорчиа, близ Сиены около 1385&nbsp;года.</p>
         </div>
         <div id="tab-2" class="catalog__tabs-content tab__content">
+          <picture>
+            <source srcset="img/catalog/catalog__tab-2-1024.jpg" media="(max-width: 576px)">
+            <source srcset="img/catalog/catalog__tab-2-768.jpg" media="(max-width: 992px)">
+            <source srcset="img/catalog/catalog__tab-2-1024.jpg" media="(max-width: 1400px)">
+            <img src="img/catalog/catalog__tab-2-1920.jpg" alt="Бергоньоне Амброджо" class="catalog__tabs-picture">
+          </picture>
           <h4 class="tab__head">Бергоньоне, Амброджо</h4>
           <span class="tab__text-second">1481-1523 (Фоссано, близ Милана-Милан)</span>
           <p class="tab__description">Итальянский художник ломбардской школы. Прозвище говорит о&nbsp;его тяготении к&nbsp;бургундской
@@ -422,6 +442,12 @@
             Луини.</p>
         </div>
         <div id="tab-3" class="catalog__tabs-content tab__content">
+          <picture>
+            <source srcset="img/catalog/catalog__tab-3-1024.jpg" media="(max-width: 576px)">
+            <source srcset="img/catalog/catalog__tab-3-768.jpg" media="(max-width: 992px)">
+            <source srcset="img/catalog/catalog__tab-3-1024.jpg" media="(max-width: 1400px)">
+            <img src="img/catalog/catalog__tab-3-1920.jpg" alt="Биссоло Франческо" class="catalog__tabs-picture">
+          </picture>
           <h4 class="tab__head">Биссоло, Франческо</h4>
           <span class="tab__text-second">1470&nbsp;&mdash; 20&nbsp;апр.&nbsp;1554&nbsp;г.</span>
           <p class="tab__description">Сын художника. Ученик Джованни Беллини. С&nbsp;1490 переехал в&nbsp;мастерскую
@@ -436,7 +462,26 @@
             Варшавы, Лос-Анджелеса (Музей Нортона Саймона и&nbsp;Los Angeles County Museum of&nbsp;Art), Дэйтоновском
             институте искусств (штат Огайо, США) и&nbsp;др.</p>
         </div>
+        <div id="tab-4" class="catalog__tabs-content tab__content">
+          <picture>
+            <source srcset="img/catalog/catalog__tab-4-1024.jpg" media="(max-width: 576px)">
+            <source srcset="img/catalog/catalog__tab-4-768.jpg" media="(max-width: 992px)">
+            <source srcset="img/catalog/catalog__tab-4-1024.jpg" media="(max-width: 1400px)">
+            <img src="img/catalog/catalog__tab-4-1920.jpg" alt="Больтраффио Джованни" class="catalog__tabs-picture">
+          </picture>
+          <h4 class="tab__head">Больтраффио, Джованни</h4>
+          <span class="tab__text-second">Италия 1467&minus;1516</span>
+          <p class="tab__description">
+            Художник происходил из&nbsp;аристократической семьи. Воспитанный в&nbsp;традициях Фоппы, Бернардо Дзенале и&nbsp;Амброджо Бергоньоне, он&nbsp;прошёл обучение в&nbsp;мастерской Леонардо. Его первое произведение &laquo;Воскресение Христа, святой Леонард и&nbsp;святая Лючия&raquo; выполнено в&nbsp;1491 году совместно с&nbsp;Марко д&rsquo;Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным художником Лодовико Моро и&nbsp;славился своими психологическими портретами.
+          </p>
+        </div>
         <div id="tab-none" class="catalog__tabs-content tab__content">
+          <picture>
+            <source srcset="img/catalog/tab-none-1024.png" media="(max-width: 576px)">
+            <source srcset="img/catalog/tab-none-768.png" media="(max-width: 992px)">
+            <source srcset="img/catalog/tab-none-1024.png" media="(max-width: 1400px)">
+            <img src="img/catalog/tab-none-1920.png" alt="Больтраффио Джованни" class="catalog__tabs-picture">
+          </picture>
           <h4 class="tab__head">Что мы о нем знаем?</h4>
           <p class="tab__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</p>
           <a href="#section__gallery" class="tab-none__link">В галерею</a>
@@ -558,13 +603,77 @@
       </div>
     </div>
   </section>
-  <section class="display-none section__projects section" id="section__projects">
+  <section class="section__projects section" id="section__projects">
     <div class="container projects__container">
       <h3 class="projects__head head-3">Проекты</h3>
+      <p class="projects__description text-description">
+        Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское
+        <button class="projects__tooltip" id="projects__tippy-1" data-tippy-content="Пример современных тенденций - современная методология разработки">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z" stroke="#9D5CD0"/>
+<path d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z" fill="black"/>
+</svg>
+        </button>
+        обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены
+        <button class="projects__tooltip" id="projects__tippy-2" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z" stroke="#9D5CD0"/>
+<path d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z" fill="black"/>
+</svg>
+      </button>
+        исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых
+        <button class="projects__tooltip" id="projects__tippy-3" data-tippy-content="В стремлении повысить качество">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z" stroke="#9D5CD0"/>
+<path d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z" fill="black"/>
+</svg>
+        </button>
+        предпосылок. Банальные,&nbsp;но неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости. Подробнее: blanchard-art.ru/projects
+      </p>
+      <h4 class="head-4 projects__head-4">Партнёры проектов:</h4>
+      <div class="swiper__container">
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="projects__swiper swiper" id="projects__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slide-1">
+              <img src="img/projects/slide-1.png" alt="Рога и копыта">
+            </div>
+            <div class="swiper-slide slide-2">
+              <img src="img/projects/slide-2.png" alt="Копыта и рога">
+            </div>
+            <div class="swiper-slide slide-3">
+              <img src="img/projects/slide-3.png" alt="Ноги Буратино">
+            </div>
+            <div class="swiper-slide slide-4">
+              <img src="img/projects/slide-4.png" alt="Белые кроссовки">
+            </div>
+            <div class="swiper-slide slide-5">
+              <img src="img/projects/slide-5.png" alt="Логические задачи">
+            </div>
+            <div class="swiper-slide slide-6">
+              <img src="img/projects/slide-6.png" alt="Логические задачи">
+            </div>
+            <div class="swiper-slide slide-7">
+              <img src="img/projects/slide-7.png" alt="Логические задачи">
+            </div>
+            <div class="swiper-slide slide-8">
+              <img src="img/projects/slide-8.png" alt="Логические задачи">
+            </div>
+            <div class="swiper-slide slide-9">
+              <img src="img/projects/slide-9.png" alt="Логические задачи">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
     </div>
   </section>
-  <section class="display-none section__contacts section" id="section__contacts">
-    <div class="container map__container"></div>
+  <section class="section__contacts section" id="section__contacts">
+    <div class="container map__container">
+    
+    </div>
   </section>
 </main>
 

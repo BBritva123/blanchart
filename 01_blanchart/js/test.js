@@ -20,7 +20,7 @@ select('.gallery__select')
 
 function gallerySwiper() {
     let swiper = new Swiper('.gallery__swiper', {
-        loop: true,
+        // loop: true,
         speed: 2000,
         slidesPerGroup: 1,
         pagination: {
@@ -61,6 +61,7 @@ function gallerySwiper() {
 
             1600: {
                 slidesPerView: 3,
+                slidesPerGroup: 3,
                 spaceBetween: 50,
             }
         }
@@ -84,7 +85,7 @@ $( function() {
 
 function eventsSwiper() {
     let swiper = new Swiper('.events__swiper', {
-        // loop: true,
+        loop: true,
         speed: 2000,
         slidesPerGroup: 1,
         slidesPerView: 3,
@@ -95,9 +96,6 @@ function eventsSwiper() {
             clickable: true,
 
         },
-
-
-        // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -122,9 +120,9 @@ function eventsSwiper() {
                 spaceBetween: 34,
             },
         //
-            1200: {
+            1000: {
                 slidesPerView: 3,
-                slidesPerGroup: 1,
+                slidesPerGroup: 2,
                 spaceBetween: 27,
             },
         //
@@ -143,3 +141,56 @@ function eventsSwiper() {
 
 }
 eventsSwiper();
+
+tippy(document.querySelectorAll('.projects__tooltip'), {
+    trigger: 'click',
+    placement: 'top',
+    theme: 'main',
+    arrow: true,
+});
+
+function projectsSwiper() {
+    let swiperProjects = new Swiper('.projects__swiper', {
+        speed: 2000,
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1500: {
+                slidesPerGroup: 1,
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+        //
+            1410: {
+                slidesPerGroup: 1,
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+
+            650: {
+                slidesPerGroup: 1,
+                slidesPerView: 2,
+                spaceBetween: 35,
+            },
+
+            570: {
+                slidesPerGroup: 1,
+                slidesPerView: 2,
+                spaceBetween: 15,
+            },
+
+            250: {
+                slidesPerGroup: 1,
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+        }
+    })
+}
+projectsSwiper()
+
+
+

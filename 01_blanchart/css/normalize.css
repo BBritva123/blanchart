@@ -41,4 +41,8 @@ input {
   cursor: text;
 }
 
+img, picture {
+  display: block;
+}
+
 
