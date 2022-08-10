@@ -324,9 +324,9 @@
               <li class="accordion__item">
                 <a href="#tab-none" class="accordion__link">Пинтуриккьо</a>
               </li>
-              <li class="accordion__item">
-                <a href="#tab-none" class="accordion__link">Пинтуриккьо</a>
-              </li>
+  <!--              <li class="accordion__item">-->
+  <!--                <a href="#tab-none" class="accordion__link">Пинтуриккьо</a>-->
+  <!--              </li>-->
             
             </ul>
           </div>
@@ -696,19 +696,24 @@
     </div>
   </section>
   <section class="section__contacts section" id="section__contacts">
-    <div class="container map__container">
-      <div class="map__content">
-        <div class="map__header">
-          <h4 class="map__head head-4">Шоурум №4</h4>
-          <adress class="map__adress">Леонтьевский переулок, дом 5/1</adress>
+    <div class="contacts__content">
+      <div class="container contacts__container">
+        <div class="contacts__header">
+          <h4 class="contacts__head head-4">Шоурум №4</h4>
+          <adress class="contacts__address">Леонтьевский переулок, дом 5/1</adress>
         </div>
-        <form class="map__form" action="#">
-          <input class='map__input' type="text" placeholder="Имя*">
-          <input class='map__input' type="number" placeholder="Телефон*">
-          <button class="map__button" type="submit">Заказать обратный звонок</button>
+        <form class="contacts__form" action="#">
+          <div class="input__wrapper">
+            <input class='contacts__input' type="text" placeholder="Имя*">
+            <input class='contacts__input' type="number" placeholder="Телефон*">
+          </div>
+          <button class="contacts__button" type="submit">
+            <span class="button-text__main">Заказать обратный звонок</span>
+            <span class="button-text__accessory">Заказать</span>
+          </button>
         </form>
         <div class="map__social">
-          <h4 class="map__head social__head head-4">Связаться в один клик</h4>
+          <h4 class="social__head head-4">Связаться в один клик</h4>
           <div class="social__block">
             <a class="social__link">
               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -740,14 +745,14 @@
           </div>
         </div>
       </div>
-      <div class="map__area"></div>
     </div>
+    <div id="map" class="map__area"></div>
   </section>
 </main>
 
-<footer>
+<footer class="footer__section">
   <div class="container footer__container">
-    <a href="#" class="footer__link">
+    <a href="#" class="footer-link__image">
       <picture>
         <source srcset="img/footer/logo-footer-320.png" media="(max-width: 560px)">
         <img class="footer__logo" src="img/footer/logo-footer-1920-1024-768.png" alt="Лого Бланчарт">
@@ -784,5 +789,8 @@
     </div>
   </div>
 </footer>
+
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=a1144608-1c47-480e-a2d2-d49f310ba8d1&lang=ru_RU"></script>
 </body>
 </html>

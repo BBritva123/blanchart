@@ -8,7 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/01_blanchart/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/01_blanchart/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/01_blanchart/css/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/01_blanchart/css/test.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_blanchart/font.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_blanchart/img/map/icon-telegram.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_blanchart/img/map/icon-watsapp.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/01_blanchart/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/01_blanchart/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01_blanchart/js/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/01_blanchart/js/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/наблюдения.docx" beforeDir="false" afterPath="$PROJECT_DIR$/наблюдения.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +78,8 @@
       <workItem from="1658737913828" duration="530000" />
       <workItem from="1658738473740" duration="201455000" />
       <workItem from="1659590967669" duration="2591000" />
-      <workItem from="1659594673496" duration="33393000" />
+      <workItem from="1659594673496" duration="34185000" />
+      <workItem from="1659945661843" duration="49249000" />
     </task>
     <servers />
   </component>

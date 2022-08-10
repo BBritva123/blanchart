@@ -6,6 +6,7 @@ function swiperMain() {
 
     })
 }
+
 swiperMain();
 
 function select(classSelect) {
@@ -16,6 +17,7 @@ function select(classSelect) {
         itemSelectText: '',
     });
 }
+
 select('.gallery__select')
 
 function gallerySwiper() {
@@ -68,20 +70,21 @@ function gallerySwiper() {
     });
 
 }
+
 gallerySwiper();
 
-$( function() {
-    $( ".catalog__accordion" ).accordion({
+$(function () {
+    $(".catalog__accordion").accordion({
         collapsible: true,
         heightStyle: "content",
     });
-} );
+});
 
-$( function() {
-    $( "#catalog__tabs" ).tabs({
+$(function () {
+    $("#catalog__tabs").tabs({
         active: 11,
     });
-} );
+});
 
 function eventsSwiper() {
     let swiper = new Swiper('.events__swiper', {
@@ -101,13 +104,13 @@ function eventsSwiper() {
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-        //     // when window width is >= 320px
+            //     // when window width is >= 320px
             120: {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
                 spaceBetween: 10,
             },
-        //
+            //
             520: {
                 slidesPerView: 2,
                 slidesPerGroup: 2,
@@ -119,27 +122,28 @@ function eventsSwiper() {
                 slidesPerGroup: 2,
                 spaceBetween: 34,
             },
-        //
+            //
             1000: {
                 slidesPerView: 3,
                 slidesPerGroup: 2,
                 spaceBetween: 27,
             },
-        //
+            //
             1400: {
                 slidesPerGroup: 1,
                 slidesPerView: 3,
                 spaceBetween: 50,
             },
-        //
-        //     1600: {
-        //         slidesPerView: 3,
-        //         spaceBetween: 50,
-        //     }
+            //
+            //     1600: {
+            //         slidesPerView: 3,
+            //         spaceBetween: 50,
+            //     }
         }
     });
 
 }
+
 eventsSwiper();
 
 tippy(document.querySelectorAll('.projects__tooltip'), {
@@ -163,7 +167,7 @@ function projectsSwiper() {
                 slidesPerView: 3,
                 spaceBetween: 50,
             },
-        //
+            //
             1410: {
                 slidesPerGroup: 1,
                 slidesPerView: 3,
@@ -190,7 +194,39 @@ function projectsSwiper() {
         }
     })
 }
-projectsSwiper()
 
+projectsSwiper();
 
+// function init() {
+//     let center = [55.75806550071568,37.62071708346125];
+//     let map = new ymaps.Map('map', {
+//         center: center,
+//         zoom: 14,
+//     });
+//
+//     let placemark = new ymaps.Placemark([55.76048537546929,37.615395580775704], {}, {
+//         iconLayout: 'default#image',
+//         iconImageHref: '../img/contacts/point.png',
+//         iconImageSize: [50, 50],
+//         iconImageOffset: [0, 0],
+//     });
+//     map.geoObjects.add(placemark);
+// };
+// ymaps.ready(init);
 
+ymaps.ready(init);
+
+function init() {
+    let myMap = new ymaps.Map("map", {
+            center: [55.75806550071568, 37.62071708346125],
+            zoom: 14,
+        // type: 'yandex#hybrid',
+        }),
+        myPlacemark = new ymaps.Placemark([55.75806550071568, 37.62071708346125], {}, {
+            iconLayout: "default#image",
+            iconImageHref: "../img/contacts/point.svg",
+            iconImageSize: [50, 50],
+        });
+    myMap.geoObjects.add(myPlacemark);
+    myMap.state.type('yandex#satellite');
+}
