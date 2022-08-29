@@ -9,6 +9,7 @@ ul {
 }
 
 a, button, input, label {
+  padding: 0;
   border: none;
   border-style: none;
   background: none;
@@ -20,6 +21,7 @@ body,
 a,
 p,
 ul,
+li,
 h1,
 h2,
 h3,
