@@ -1372,7 +1372,6 @@ html .ui-button.ui-state-disabled:active {
   bottom: 39px;
   border-bottom: 1px solid var(--hover-color);
   color: var(--hover-color);
-  z-index: 1;
   transition: border .3s ease, color .3s ease;
 }
 
@@ -1799,7 +1798,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 [class*="ground-pane"] {
-  /*filter: grayscale(100%) invert(0);*/
+  filter: grayscale(100%) invert(100);
 }
 
 [class*="zoom"] {
