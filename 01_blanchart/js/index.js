@@ -8,6 +8,7 @@ function swiperMain() {
 
     })
 };
+
 function gallerySwiper() {
     let swiper = new Swiper('.gallery__swiper', {
         // loop: true,
@@ -58,6 +59,7 @@ function gallerySwiper() {
     });
 
 };
+
 function eventsSwiper() {
     let swiper = new Swiper('.events__swiper', {
         loop: false,
@@ -115,6 +117,7 @@ function eventsSwiper() {
     });
 
 };
+
 function projectsSwiper() {
     let swiperProjects = new Swiper('.projects__swiper', {
         speed: 2000,
@@ -134,6 +137,12 @@ function projectsSwiper() {
                 slidesPerGroup: 1,
                 slidesPerView: 3,
                 spaceBetween: 30,
+            },
+
+            900: {
+                slidesPerGroup: 1,
+                slidesPerView: 2,
+                spaceBetween: 50,
             },
 
             650: {
@@ -200,6 +209,7 @@ function select(classSelect) {
         itemSelectText: '',
     });
 }
+
 select('.gallery__select')
 
 
@@ -221,7 +231,7 @@ function init() {
         controls: ['zoomControl', 'geolocationControl']
     }, {
         // Чтобы задать опции через конструктор карты, к названиям опций следует добавить префикс в виде ключа того элемента, для которого задается опция.
-            geolocationControlPosition: {
+        geolocationControlPosition: {
             top: 340,
             right: 20,
         },
@@ -246,5 +256,36 @@ function init() {
     map.controls.remove('fullscreenControl');
     map.controls.remove('routeButtonControl');
     map.controls.remove('routePanelControl');
+    // map.controls.add('smallMapDefaultSet')
+    if (window.innerWidth <= '577') {
+        map.controls.remove('zoomControl');
+        map.controls.remove('geolocationControl');
+    } else {
+        map.controls.add('zoomControl');
+        map.controls.add('geolocationControl');
+    }
 }
+
 ymaps.ready(init);
+
+// if (window.innerWidth >= '721') {
+//     geolocationControlPosition: {
+//         top: 340,
+//             right: 20,
+//     },
+//     zoomControlPosition: {
+//         top: 270,
+//             right: 20,
+//     },
+//     zoomControlSize: 'small',
+// } else if ('576' <= window.innerWidth <= '720') {
+//     geolocationControlPosition: {
+//         top: 140,
+//             right: 20,
+//     },
+//     zoomControlPosition: {
+//         top: 210,
+//             right: 20,
+//     },
+//     zoomControlSize: 'small',
+// }

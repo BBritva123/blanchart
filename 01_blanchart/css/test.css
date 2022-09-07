@@ -1,55 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1600px) {
 
 
@@ -57,12 +5,17 @@
 
 @media (max-width: 1400px) {
 
-
 }
 
 @media (max-width: 992px) {
 
+  .header__search.is-open {
+    width: calc(100% - 100px);
+  }
 
+  .block__search.is-open {
+    width: 100%;
+  }
 }
 
 @media (max-width: 720px) {
