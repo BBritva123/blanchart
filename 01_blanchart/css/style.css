@@ -2028,7 +2028,7 @@ html .ui-button.ui-state-disabled:active {
     width: 0;
     height: 29px;
     overflow: hidden;
-    transition: width .3s ease;
+    transition: width .5s ease;
   }
 
   .is-open.block__search {

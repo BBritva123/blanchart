@@ -61,7 +61,7 @@ buttonBurger.addEventListener('click', () => {
     nav.classList.toggle('is-open')
     if (nav.classList.contains('is-open')) {
         document.querySelector('body').style.overflow = 'hidden'
-    }
+    } else document.querySelector('body').style.overflow = 'visible'
     links.forEach(link => {
         link.addEventListener('click', () => {
             buttonBurger.classList.remove('is-open')
@@ -74,6 +74,7 @@ buttonBurger.addEventListener('click', () => {
 let iconSearch = document.querySelector('.search__icon')
 let iconClose = document.querySelector('.close__icon')
 let blockSearch = document.querySelector('.block__search')
+let headerSearch = document.querySelector('.header__search')
 let form = document.querySelector('.form__search')
 let buttonClose = document.querySelector('.close__button')
 
@@ -83,5 +84,6 @@ buttonClose.addEventListener('click', () => {
     iconSearch.classList.toggle('is-open')
     iconClose.classList.toggle('is-open')
     blockSearch.classList.toggle('is-open')
+    headerSearch.classList.toggle('is-open')
 })
 
