@@ -289,3 +289,108 @@ ymaps.ready(init);
 //     },
 //     zoomControlSize: 'small',
 // }
+
+
+//BURGER
+
+let buttonBurger = document.querySelector('.header-top__button-burger')
+buttonBurger.addEventListener('click', () => {
+    let nav = document.querySelector('.header-top__nav')
+    let links = document.querySelectorAll('.nav__link')
+    buttonBurger.classList.toggle('is-open')
+    nav.classList.toggle('is-open')
+    if (nav.classList.contains('is-open')) {
+        document.querySelector('body').style.overflow = 'hidden'
+    } else document.querySelector('body').style.overflow = 'visible'
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            buttonBurger.classList.remove('is-open')
+            nav.classList.remove('is-open')
+            document.querySelector('body').style.overflow = 'visible'
+        })
+    })
+})
+
+
+// SEARCH
+
+let iconSearch = document.querySelector('.search__icon')
+let iconClose = document.querySelector('.close__icon')
+let blockSearch = document.querySelector('.block__search')
+let headerSearch = document.querySelector('.header__search')
+let form = document.querySelector('.form__search')
+let buttonClose = document.querySelector('.close__button')
+
+buttonClose.addEventListener('click', () => {
+    buttonClose.classList.toggle('is-open')
+    form.classList.toggle('is-open')
+    iconSearch.classList.toggle('is-open')
+    iconClose.classList.toggle('is-open')
+    blockSearch.classList.toggle('is-open')
+    headerSearch.classList.toggle('is-open')
+})
+
+// VALIDATE & INPUTMASK
+
+
+const validate = new JustValidate('.contacts__form')
+
+const selector = document.querySelector("#phone");
+const im = new Inputmask("+7 (999) 999 99 99");
+im.mask(selector)
+
+const placeholder = selector.placeholder;
+
+selector.addEventListener('mouseover', () => {
+    input.placeholder = '+7 (___) ___ __ __'
+})
+
+selector.addEventListener('mouseout', () => {
+    input.placeholder = placeholder;
+})
+
+
+validate.addField('#name', [
+    {
+        rule: 'required',
+        errorMessage: 'Введите Ваше имя:'
+    },
+    {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: 'Слишком короткое имя'
+    },
+    {
+        rule: 'maxLength',
+        value: 10,
+        errorMessage: 'Введите имя покороче:'
+    },
+])
+
+    .addField('#phone', [
+        // {
+        //     rule: 'required',
+        //     errorMessage: 'Введите номер телефона:',
+        // },
+        {
+            validator: () => {
+                const phone = selector.inputmask.unmaskedvalue(); //для отправки телефона без маски и лишних символов
+                return Boolean(Number(phone) && phone.length > 0)
+            },
+            errorMessage: "Введите номер телефона:"
+        },
+        {
+            validator: () => {
+                const phone = selector.inputmask.unmaskedvalue(); //для отправки телефона без маски и лишних символов
+                return Boolean(Number(phone) && phone.length === 10)
+            },
+            errorMessage: "Номер введен не полностью:"
+        },
+        {
+            validator: () => {
+                const phone = selector.inputmask.unmaskedvalue(); //для отправки телефона без маски и лишних символов
+                return Boolean(Number(phone) && phone[0] === '9')
+            },
+            errorMessage: "Телефон не является мобильным:"
+        }
+    ])

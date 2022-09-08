@@ -26,8 +26,9 @@
   <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   
-  
   <script src="js/swiper.min.js"></script>
+  <script src="js/just-validate.min.js"></script>
+  <script src="js/input-mask.min.js"></script>
   <script src="js/choices.min.js"></script>
   <script src="js/simplebar.min.js"></script>
   <script src="js/minibar.min.js"></script>
@@ -40,7 +41,7 @@
 <header class="header">
   <div class="header-top">
     <div class="container header-top__container">
-      <button class="header-top__button-burger">
+      <button class="header-top__button-burger" aria-label="Открыть/Закрыть меню навигации">
         <span class="header-top-line-burger top-line"></span>
         <span class="header-top-line-burger medium-line"></span>
         <span class="header-top-line-burger bottom-line"></span>
@@ -100,14 +101,14 @@
       </nav>
       <div class="header__search">
         <div class="block__search">
-          <form class="form__search">
+          <form class="form__search" method="GET" aria-label="Форма поиска по сайту">
             <button class="search__button" aria-label="Выполнить поиск по сайту" type="submit"></button>
             <label class="search__label">
-              <input class="search__input" type="text" placeholder="Поиск по сайту">
+              <input class="search__input" type="text" placeholder="Поиск по сайту" autocomplete="on" aria-label="Поле ввода запроса для поиска">
             </label>
           </form>
         </div>
-          <button class="close__button">
+          <button class="close__button" aria-label="Открыть/Закрыть строку поиска">
             <span class="search__icon"></span>
             <span class="close__icon"></span>
           </button>
@@ -412,7 +413,7 @@
       </p>
       <div class="catalog__content" id="catalog__tabs">
         <div class="catalog__accordion">
-          <h3 class="accordion__head" tabindex="0">
+          <h3 class="accordion__head" tabindex="0" aria-label="Открыть список художников периода">
             <span class="accordion__text">C 1400 по 1499 гг.</span>
           </h3>
           <div class="accordion__content">
@@ -494,7 +495,7 @@
             
             </ul>
           </div>
-          <h3 class="accordion__head">
+          <h3 class="accordion__head" aria-label="Открыть список художников периода">
             <span class="accordion__text">C 1500 по 1599 гг.</span>
           </h3>
           <div class="accordion__content">
@@ -505,7 +506,7 @@
               <a href="#section__gallery" class="accordion__link content__link">В галерею</a>
             </div>
           </div>
-          <h3 class="accordion__head">
+          <h3 class="accordion__head" aria-label="Открыть список художников периода">
             <span class="accordion__text">C 1600 по 1699 гг.</span>
           </h3>
           <div class="accordion__content">
@@ -516,7 +517,7 @@
               <a href="#section__gallery" class="accordion__link content__link">В галерею</a>
             </div>
           </div>
-          <h3 class="accordion__head">
+          <h3 class="accordion__head" aria-label="Открыть список художников периода">
             <span class="accordion__text">C 1700 по 1799 гг.</span>
           </h3>
           <div class="accordion__content">
@@ -527,7 +528,7 @@
               <a href="#section__gallery" class="accordion__link content__link">В галерею</a>
             </div>
           </div>
-          <h3 class="accordion__head">
+          <h3 class="accordion__head" aria-label="Открыть список художников периода">
             <span class="accordion__text">C 1800 по 1899 гг.</span>
           </h3>
           <div class="accordion__content">
@@ -538,7 +539,7 @@
               <a href="#section__gallery" class="accordion__link content__link">В галерею</a>
             </div>
           </div>
-          <h3 class="accordion__head">
+          <h3 class="accordion__head" aria-label="Открыть список художников периода">
             <span class="accordion__text">C 1900 по 1999 гг.</span>
           </h3>
           <div class="accordion__content">
@@ -549,7 +550,7 @@
               <a href="#section__gallery" class="accordion__link content__link">В галерею</a>
             </div>
           </div>
-          <h3 class="accordion__head">
+          <h3 class="accordion__head" aria-label="Открыть список художников периода">
             <span class="accordion__text">C 2000 г.</span>
           </h3>
           <div class="accordion__content">
@@ -866,13 +867,13 @@
           <h4 class="contacts__head head-4">Шоурум №4</h4>
           <address class="contacts__address">Леонтьевский переулок, дом 5/1</address>
         </div>
-        <form class="contacts__form" action="#">
+        <form class="contacts__form" action="#" method="POST" aria-label="Форма обратной связи">
           <div class="input__wrapper">
             <label class="contacts__label">
-              <input class='contacts__input' type="text" placeholder="Имя*">
+              <input class='contacts__input' id="name" type="text" placeholder="Имя*" name="name" autocomplete="on">
             </label>
             <label class="contacts__label">
-              <input class='contacts__input' type="number" placeholder="Телефон*">
+              <input class='contacts__input' id="phone" placeholder="Телефон*" name="phone" autocomplete="on">
             </label>
           </div>
           <button class="contacts__button" type="submit">
@@ -904,7 +905,7 @@
                 <defs>
                   <linearGradient id="paint0_linear_136320_63" x1="20" y1="0" x2="20" y2="39.7033"
                                   gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#2AABEE"/>
+                    <stop stop-color="#2AABEE" offset="0"/>
                     <stop offset="1" stop-color="#229ED9"/>
                   </linearGradient>
                 </defs>
