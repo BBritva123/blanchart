@@ -61,19 +61,21 @@
 }
 
 :root {
-  --accordion-default-color: #ececec;
-  --accordion-hover-color: #d1a9f0;
-  --accordion-photo-color: #b7b7b7;
-  --active-color: #7943a4;
-  --checkbox-checked-color: #c283f3;
+  --accordion-default-color: #ECECEC;
+  --accordion-hover-color: #D1A9F0;
+  --accordion-photo-color: #B7B7B7;
+  --active-color: #7943A4;
+  --checkbox-checked-color: #C283F3;
   --header-background-color: #000;
-  --hover-color: #9d5cd0;
-  --light-text-color: #fff;
+  --hover-color: #9D5CD0;
+  --light-text-color: #FFF;
   --main-text-color: #333;
-  --main-custom-color: #9d5cd0;
-  --main-border-accordion: #cacaca;
+  --main-custom-color: #9D5CD0;
+  --main-border-accordion: #CACACA;
   --second-text-color: #999;
-  --input-background-color: #eaeaea;
+  --swiper-background-color: #666;
+  --input-background-color: #EAEAEA;
+  --invalid-color: #D11616;
 }
 
 html {
@@ -226,7 +228,7 @@ button {
   display: flex;
   position: relative;
   padding-left: 4px;
-  color: #fff;
+  color: var(--light-text-color);
   font-size: 18px;
   -webkit-transition: color 0.3s ease, padding-left 0.3s ease;
   -o-transition: color 0.3s ease, padding-left 0.3s ease;
@@ -389,7 +391,7 @@ button {
 
 .simplebar-track.simplebar-vertical {
   width: 3px;
-  background-color: #000;
+  background-color: var(--header-background-color);
 }
 
 .simplebar-track {
@@ -397,7 +399,7 @@ button {
 }
 
 .simplebar-scrollbar {
-  background-color: #fff;
+  background-color: var(--light-text-color);
 }
 
 .painter__item:not(:last-child) {
@@ -787,10 +789,6 @@ button {
   line-height: 32px;
 }
 
-.gallery__select-block {
-  /*color: #000;*/
-}
-
 .gallery__select-block .choices {
   max-width: 400px;
   height: 40px;
@@ -818,7 +816,7 @@ button {
 .choices__list--dropdown,
 .choices__list[aria-expanded] {
   background-color: var(--header-background-color);
-  color: #999;
+  color: var(--second-text-color);
   border: 1px solid var(--main-text-color);
   border-radius: 6px;
 }
@@ -858,7 +856,7 @@ button {
 
 .choices__list--dropdown .choices__item:not(:last-child),
 .choices__list[aria-expanded] .choices__item:not(:last-child) {
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid var(--second-text-color);
 }
 
 /*убираем выбранный элемент из дропдауна*/
@@ -1067,9 +1065,9 @@ button {
   height: 30px;
   top: auto;
   margin-top: auto;
-  border: 2px solid #666;
+  border: 2px solid var(--swiper-background-color);
   border-radius: 50%;
-  background-color: #666;
+  background-color: var(--swiper-background-color);
   z-index: 100;
   -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
   -o-transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -1674,14 +1672,14 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .tippy-box[data-theme~="main"] > .tippy-arrow::before {
-  color: #9d50ec;
+  color: var(--main-custom-color);
 }
 
 .tippy-box[data-theme~="main"] > .tippy-content {
   max-width: 264px;
   padding: 8px;
-  background-color: #9d50ec;
-  color: #fff;
+  background-color: var(--main-custom-color);
+  color: var(--light-text-color);
 }
 
 .projects__description {
@@ -1975,7 +1973,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .just-validate-error-field {
-  border-color: #d11616;
+  border-color: var(--invalid-color);
 }
 
 .just-validate-error-label {
@@ -1987,7 +1985,7 @@ html .ui-button.ui-state-disabled:active {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #d11616;
+  color: var(--invalid-color);
 }
 
 .contacts__input {
@@ -2078,7 +2076,7 @@ html .ui-button.ui-state-disabled:active {
 }
 
 .footer__section {
-  background-color: #000;
+  background-color: var(--header-background-color);
 }
 
 .footer__container {
@@ -2593,7 +2591,7 @@ html .ui-button.ui-state-disabled:active {
   }
 
   #events__swiper .swiper-pagination-bullet {
-    background-color: #666;
+    background-color: var(--swiper-background-color);
     width: 10px;
     margin: 8px;
     height: 10px;
