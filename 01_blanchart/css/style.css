@@ -368,11 +368,19 @@ button {
 
 .painter__block {
   position: absolute;
+  display: none;
   top: 47px;
   width: 300px;
-  height: 300px;
+  height: 0;
   padding: 40px;
   background-color: rgba(0, 0, 0, 0.6);
+  /*transition: height 5s ease;*/
+}
+
+.painter__block.is-open {
+  display: block;
+  height: 300px;
+  /*transition: height .5s ease;*/
 }
 
 .painter__list {

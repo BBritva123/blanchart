@@ -129,7 +129,7 @@
               </svg>
             </span>
           </button>
-          <div class="painter__block display-none">
+          <div class="painter__block">
             <ul class="painter__list" id="painter__list-1">
               <li class='painter__item painter__item-1'>
                 <a href="#" class="painter__link">Тинторетто</a>
@@ -158,7 +158,7 @@
               </svg>
             </span>
           </button>
-          <div class="painter__block  display-none">
+          <div class="painter__block">
             <ul class="painter__list" id="painter__list-2">
               <li class="painter__item painter__item-1">
                 <a href="#" class="painter__link">Моне</a>
@@ -870,13 +870,13 @@
         <form class="contacts__form" action="#" method="POST" aria-label="Форма обратной связи">
           <div class="input__wrapper">
             <label class="contacts__label">
-              <input class='contacts__input' id="name" type="text" placeholder="Имя*" name="name" autocomplete="on">
+              <input class='contacts__input' id="name" type="text" placeholder="Имя*" name="name" autocomplete="off" aria-label="Поле ввода имени" tabindex="1">
             </label>
             <label class="contacts__label">
-              <input class='contacts__input' id="phone" placeholder="Телефон*" name="phone" autocomplete="on">
+              <input class='contacts__input' id="phone" placeholder="Телефон*" name="phone" autocomplete="off" aria-label="Поле ввода номера телефона" tabindex="1">
             </label>
           </div>
-          <button class="contacts__button" type="submit">
+          <button class="contacts__button" type="submit" tabindex="0">
             <span class="button-text__main">Заказать обратный звонок</span>
             <span class="button-text__accessory">Заказать</span>
           </button>

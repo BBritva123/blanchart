@@ -172,6 +172,33 @@ swiperMain();
 gallerySwiper();
 
 
+//DROPDOWN
+
+let buttons = document.querySelectorAll('.header-bottom__button-list')
+let blocks = document.querySelectorAll('.painter__block')
+
+buttons.forEach(button => {
+
+    button.addEventListener('click', function () {
+        let thisBlock = this.parentElement.querySelector('.painter__block')
+
+        buttons.forEach(btn => {
+            if (btn != thisBlock) {
+                btn.classList.remove('is-open')
+            }
+        })
+
+        blocks.forEach(block => {
+            if (block != thisBlock) {
+                block.classList.remove('is-open')
+            }
+        })
+        button.classList.toggle('is-open')
+        thisBlock.classList.toggle('is-open')
+    })
+})
+
+
 // ACCORDION & TABS
 
 $(function () {
@@ -368,10 +395,6 @@ validate.addField('#name', [
 ])
 
     .addField('#phone', [
-        // {
-        //     rule: 'required',
-        //     errorMessage: 'Введите номер телефона:',
-        // },
         {
             validator: () => {
                 const phone = selector.inputmask.unmaskedvalue(); //для отправки телефона без маски и лишних символов

@@ -41,17 +41,16 @@
 // })
 
 
-let buttons = document.querySelectorAll('.header-bottom__button-list')
-let blocks = document.querySelectorAll('.painter__block')
-
-buttons.forEach(button => {
-    button.addEventListener('click', function () {
-        console.log(this.parentElement.querySelector('.painter__block'))
-        let thisBlock = this.parentElement.querySelector('.painter__block')
-        thisBlock.classList.toggle('display-none')
-    })
-})
-
+// let buttons = document.querySelectorAll('.header-bottom__button-list')
+// let blocks = document.querySelectorAll('.painter__block')
+//
+// buttons.forEach(button => {
+//     button.addEventListener('click', function () {
+//         console.log(this.parentElement.querySelector('.painter__block'))
+//         let thisBlock = this.parentElement.querySelector('.painter__block')
+//         thisBlock.classList.toggle('display-none')
+//     })
+// })
 
 
 
