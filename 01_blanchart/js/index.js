@@ -78,13 +78,13 @@ function eventsSwiper() {
             prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-            //     // when window width is >= 320px
+
             120: {
                 slidesPerView: 1,
                 slidesPerGroup: 1,
                 spaceBetween: 10,
             },
-            //
+
             520: {
                 slidesPerView: 2,
                 slidesPerGroup: 2,
@@ -96,23 +96,18 @@ function eventsSwiper() {
                 slidesPerGroup: 2,
                 spaceBetween: 34,
             },
-            //
+
             1000: {
                 slidesPerView: 3,
                 slidesPerGroup: 2,
                 spaceBetween: 27,
             },
-            //
+
             1400: {
                 slidesPerGroup: 1,
                 slidesPerView: 3,
                 spaceBetween: 50,
             },
-            //
-            //     1600: {
-            //         slidesPerView: 3,
-            //         spaceBetween: 50,
-            //     }
         }
     });
 
@@ -175,18 +170,18 @@ gallerySwiper();
 //DROPDOWN
 
 let buttons = document.querySelectorAll('.header-bottom__button-list')
-let blocks = document.querySelectorAll('.painter__block')
+let blocks = document.querySelectorAll('.painter')
 
 buttons.forEach(button => {
 
     button.addEventListener('click', function () {
-        let thisBlock = this.parentElement.querySelector('.painter__block')
+        let thisBlock = this.parentElement.querySelector('.painter')
 
-        buttons.forEach(btn => {
-            if (btn != thisBlock) {
-                btn.classList.remove('is-open')
-            }
-        })
+        // buttons.forEach(btn => {
+        //     if (btn != thisBlock) {
+        //         btn.classList.remove('is-open')
+        //     }
+        // })
 
         blocks.forEach(block => {
             if (block != thisBlock) {
@@ -341,12 +336,12 @@ buttonBurger.addEventListener('click', () => {
 
 // SEARCH
 
-let iconSearch = document.querySelector('.search__icon')
-let iconClose = document.querySelector('.close__icon')
+let iconSearch = document.querySelector('.search__icon_open')
+let iconClose = document.querySelector('.search__icon_close')
 let blockSearch = document.querySelector('.block__search')
 let headerSearch = document.querySelector('.header__search')
-let form = document.querySelector('.form__search')
-let buttonClose = document.querySelector('.close__button')
+let form = document.querySelector('.search__form')
+let buttonClose = document.querySelector('.search__button_close')
 
 buttonClose.addEventListener('click', () => {
     buttonClose.classList.toggle('is-open')
