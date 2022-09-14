@@ -381,19 +381,19 @@ button {
 
 .painter {
   position: absolute;
-  display: none;
   top: 47px;
   width: 300px;
-  height: 0;
   padding: 40px;
   background-color: rgba(0, 0, 0, 0.6);
-  /*transition: height 5s ease;*/
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s ease, visibility .5s ease;
 }
 
 .painter.is-open {
-  display: block;
   height: 300px;
-  /*transition: height .5s ease;*/
+  opacity: 1;
+  visibility: visible;
 }
 
 .painter__list {

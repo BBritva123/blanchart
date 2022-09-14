@@ -52,5 +52,13 @@
 //     })
 // })
 
+// document.onclick = function (e) {
+//     let target = e.target
+//     blocks.forEach(block => {
+//         if (!block.classList.contains('painter')) {
+//
+//         }
+//     })
+// }
 
 

@@ -1,16 +1,16 @@
 // SWIPERS
 
 function swiperMain() {
-    let swiper = new Swiper('.main-swiper', {
+     new Swiper('.main-swiper', {
         autoplay: true,
         speed: 5000,
         effect: 'fade',
 
     })
-};
+}
 
 function gallerySwiper() {
-    let swiper = new Swiper('.gallery__swiper', {
+    new Swiper('.gallery__swiper', {
         // loop: true,
         speed: 2000,
         slidesPerGroup: 1,
@@ -58,10 +58,10 @@ function gallerySwiper() {
         }
     });
 
-};
+}
 
 function eventsSwiper() {
-    let swiper = new Swiper('.events__swiper', {
+    new Swiper('.events__swiper', {
         loop: false,
         speed: 2000,
         slidesPerGroup: 1,
@@ -111,10 +111,10 @@ function eventsSwiper() {
         }
     });
 
-};
+}
 
 function projectsSwiper() {
-    let swiperProjects = new Swiper('.projects__swiper', {
+    new Swiper('.projects__swiper', {
         speed: 2000,
 
         navigation: {
@@ -159,7 +159,7 @@ function projectsSwiper() {
             },
         }
     })
-};
+}
 
 projectsSwiper();
 eventsSwiper();
@@ -177,22 +177,36 @@ buttons.forEach(button => {
     button.addEventListener('click', function () {
         let thisBlock = this.parentElement.querySelector('.painter')
 
-        // buttons.forEach(btn => {
-        //     if (btn != thisBlock) {
-        //         btn.classList.remove('is-open')
-        //     }
-        // })
-
         blocks.forEach(block => {
-            if (block != thisBlock) {
+            if (block !== thisBlock) {
                 block.classList.remove('is-open')
             }
         })
+
+        buttons.forEach(btn => {
+            console.log(this)
+            console.log(btn)
+            if (btn !== this) {
+                btn.classList.remove('is-open')
+            }
+        });
+
         button.classList.toggle('is-open')
         thisBlock.classList.toggle('is-open')
     })
 })
 
+document.addEventListener("click", function(e) {
+    let target = e.target;
+    if (!target.closest(".header-bottom__list")) {
+        document.querySelectorAll(".painter").forEach(el => {
+            el.classList.remove("is-open");
+        })
+        document.querySelectorAll(".header-bottom__button-list").forEach(el => {
+            el.classList.remove("is-open");
+        });
+    }
+})
 
 // ACCORDION & TABS
 
