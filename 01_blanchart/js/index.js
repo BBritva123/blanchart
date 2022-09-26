@@ -312,14 +312,14 @@ let buttonBurger = document.querySelector('.header-top__button-burger');
 buttonBurger.addEventListener('click', () => {
     let nav = document.querySelector('.header-top__nav')
     let links = document.querySelectorAll('.nav__link')
-    buttonBurger.classList.toggle('is-open')
+    buttonBurger.classList.toggle('button-burger_active')
     nav.classList.toggle('is-open')
     if (nav.classList.contains('is-open')) {
         document.querySelector('body').style.overflow = 'hidden'
     } else document.querySelector('body').style.overflow = 'visible'
     links.forEach(link => {
         link.addEventListener('click', () => {
-            buttonBurger.classList.remove('is-open')
+            buttonBurger.classList.remove('button-burger_active')
             nav.classList.remove('is-open')
             document.querySelector('body').style.overflow = 'visible'
         })

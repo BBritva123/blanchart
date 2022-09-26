@@ -321,8 +321,8 @@
 
   .button-burger_active .top-line {
     width: 100%;
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -ms-transform: rotate(225deg) translate(-8px, -12px);
+    transform: rotate(225deg) translate(-8px, -12px);
   }
 
   .button-burger_active .medium-line {
@@ -331,8 +331,8 @@
 
   .button-burger_active .bottom-line {
     width: 100%;
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    -ms-transform: rotate(-225deg) translate(-4px, 8px);
+    transform: rotate(-225deg) translate(-4px, 8px);
   }
 
   .header-top__nav {
@@ -764,6 +764,16 @@
     width: 50%;
   }
 
+  .button-burger_active .top-line {
+    -ms-transform: rotate(225deg) translate(-7px, -10px);
+    transform: rotate(225deg) translate(-7px, -10px);
+  }
+
+  .button-burger_active .bottom-line {
+    -ms-transform: rotate(-225deg) translate(-3px, 6px);
+    transform: rotate(-225deg) translate(-3px, 6px);
+  }
+
   .header-top__nav {
     padding: 70px 30px;
   }
@@ -1010,6 +1020,10 @@
     padding: 8px 22px;
   }
 
+  .just-validate-error-label {
+    top: -15px;
+  }
+
   .contacts__button {
     width: calc(50% - 10px);
     font-weight: 600;
@@ -1080,6 +1094,16 @@
 
   .bottom-line {
     width: 40%;
+  }
+
+  .button-burger_active .top-line {
+    -ms-transform: rotate(225deg) translate(-10px, -8px);
+    transform: rotate(225deg) translate(-10px, -8px);
+  }
+
+  .button-burger_active .bottom-line {
+    -ms-transform: rotate(-225deg) translate(-3px, 2px);
+    transform: rotate(-225deg) translate(-3px, 2px);
   }
 
   .header-top__nav {
