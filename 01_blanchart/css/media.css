@@ -724,6 +724,8 @@
   .social__head {
     margin-bottom: 6px;
   }
+
+
 }
 
 @media (max-width: 720px) {
@@ -1030,6 +1032,10 @@
 
   .map {
     height: 500px;
+  }
+
+  .ymaps-2-1-79-controls-pane .ymaps-2-1-79-controls__control {
+    display: none;
   }
 }
 

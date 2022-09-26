@@ -292,14 +292,15 @@ function init() {
     map.controls.remove('fullscreenControl');
     map.controls.remove('routeButtonControl');
     map.controls.remove('routePanelControl');
+    map.behaviors.disable('scrollZoom');
     // map.controls.add('smallMapDefaultSet')
-    if (window.innerWidth <= '577') {
-        map.controls.remove('zoomControl');
-        map.controls.remove('geolocationControl');
-    } else {
-        map.controls.add('zoomControl');
-        map.controls.add('geolocationControl');
-    }
+    // if (window.innerWidth <= '577') {
+    //     map.controls.remove('zoomControl');
+    //     map.controls.remove('geolocationControl');
+    // } else {
+    //     map.controls.add('zoomControl');
+    //     map.controls.add('geolocationControl');
+    // }
 }
 
 ymaps.ready(init);
