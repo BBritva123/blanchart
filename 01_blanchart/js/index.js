@@ -231,7 +231,7 @@ function tooltipShow() {
         theme: 'main',
         arrow: true,
     });
-};
+}
 tooltipShow();
 
 
@@ -239,7 +239,7 @@ tooltipShow();
 
 function select(classSelect) {
     const element = document.querySelector(classSelect);
-    const choices = new Choices(element, {
+    new Choices(element, {
         searchEnabled: false,
         position: 'bottom',
         itemSelectText: '',
@@ -304,32 +304,10 @@ function init() {
 
 ymaps.ready(init);
 
-// if (window.innerWidth >= '721') {
-//     geolocationControlPosition: {
-//         top: 340,
-//             right: 20,
-//     },
-//     zoomControlPosition: {
-//         top: 270,
-//             right: 20,
-//     },
-//     zoomControlSize: 'small',
-// } else if ('576' <= window.innerWidth <= '720') {
-//     geolocationControlPosition: {
-//         top: 140,
-//             right: 20,
-//     },
-//     zoomControlPosition: {
-//         top: 210,
-//             right: 20,
-//     },
-//     zoomControlSize: 'small',
-// }
-
 
 //BURGER
 
-let buttonBurger = document.querySelector('.header-top__button-burger')
+let buttonBurger = document.querySelector('.header-top__button-burger');
 buttonBurger.addEventListener('click', () => {
     let nav = document.querySelector('.header-top__nav')
     let links = document.querySelectorAll('.nav__link')
@@ -345,29 +323,35 @@ buttonBurger.addEventListener('click', () => {
             document.querySelector('body').style.overflow = 'visible'
         })
     })
-})
+});
 
 
 // SEARCH
 
-let iconSearch = document.querySelector('.search__icon_open')
-let iconClose = document.querySelector('.search__icon_close')
-let blockSearch = document.querySelector('.block__search')
-let headerSearch = document.querySelector('.header__search')
-let form = document.querySelector('.search__form')
-let buttonClose = document.querySelector('.search__button_close')
+let form = document.querySelector('.search__form');
+let input = document.querySelector('.search__input');
+let buttonOpenForm = document.querySelector('.search__button_close');
+let buttonCloseForm = document.querySelector('.search__close');
+let label = document.querySelector('.search__label');
 
-buttonClose.addEventListener('click', () => {
-    buttonClose.classList.toggle('is-open')
-    form.classList.toggle('is-open')
-    iconSearch.classList.toggle('is-open')
-    iconClose.classList.toggle('is-open')
-    blockSearch.classList.toggle('is-open')
-    headerSearch.classList.toggle('is-open')
+buttonOpenForm.addEventListener('click', () => {
+    form.classList.add('is-open');
+    input.classList.add('is-open');
+    buttonOpenForm.classList.add('is-open');
+    buttonCloseForm.classList.add('is-open');
+    label.classList.add('is-open');
 })
 
-// VALIDATE & INPUTMASK
+buttonCloseForm.addEventListener('click', () => {
+    form.classList.remove('is-open');
+    input.classList.remove('is-open');
+    buttonOpenForm.classList.remove('is-open');
+    buttonCloseForm.classList.remove('is-open');
+    label.classList.remove('is-open');
+})
 
+
+// VALIDATE & INPUTMASK
 
 const validate = new JustValidate('.contacts__form')
 
